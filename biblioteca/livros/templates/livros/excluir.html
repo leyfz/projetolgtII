@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Excluir Livro</title>
+</head>
+
+<body>
+
+<h2>Deseja excluir este livro?</h2>
+
+<p>{{livro.titulo}}</p>
+
+<form method="POST">
+{% csrf_token %}
+
+<button type="submit">Confirmar exclusão</button>
+
+</form>
+
+<br>
+
+<a href="/livros/">Cancelar</a>
+
+</body>
+</html>

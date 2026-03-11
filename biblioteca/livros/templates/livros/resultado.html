@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Resultado da consulta</title>
+</head>
+
+<body>
+
+<h2>Resultado da busca</h2>
+
+{% for livro in livros %}
+
+<p>
+<a href="/livro/{{livro.id}}">
+{{livro.titulo}}
+</a>
+</p>
+
+{% empty %}
+
+<p>Nenhum livro encontrado.</p>
+
+{% endfor %}
+
+</body>
+</html>
